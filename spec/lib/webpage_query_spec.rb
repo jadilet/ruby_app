@@ -17,13 +17,13 @@ describe WebpageQuery do
   let(:webpage_query) { described_class.new(webpage) }
 
   context '#visits' do
-    it 'returns a hash' do
+    it 'returns an array of webpage visits sorted by descending order' do
       expect(webpage_query.visits).to eq webpage_query_visit_views
     end
   end
 
   context '#unique_views' do
-    it 'returns a hash' do
+    it 'returns an array of unique webpage visits sorted by descending order' do
       expect(webpage_query.unique_views).to eq webpage_query_unique_views
     end
   end
